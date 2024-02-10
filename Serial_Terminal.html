@@ -1,0 +1,1157 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="serial-terminal-application-requirements-document">Serial Terminal Application Requirements Document</h1>
+<h2 id="introduction">1. Introduction</h2>
+<h3 id="purpose">1.1 Purpose</h3>
+<p>The purpose of this document is to outline the requirements for a Serial Terminal Application that allows users to communicate with devices over serial connections. This application will enable users to select COM ports, set baud rates, open/close ports, send data, and view incoming data in real-time.</p>
+<h3 id="scope">1.2 Scope</h3>
+<p>This document covers the functional and non-functional requirements for the Serial Terminal Application. It includes user interface design, hardware and software interfaces, performance, and other system attributes.</p>
+<h3 id="definitions-acronyms-and-abbreviations">1.3 Definitions, Acronyms, and Abbreviations</h3>
+<ul>
+<li><strong>COM Port</strong>: Communication Port, a serial port interface on computers for connecting peripherals.</li>
+<li><strong>Baud Rate</strong>: The rate at which information is transferred in a communication channel.</li>
+<li><strong>UI</strong>: User Interface.</li>
+</ul>
+<h3 id="references">1.4 References</h3>
+<p>N/A</p>
+<h3 id="overview">1.5 Overview</h3>
+<p>The remainder of this document provides a detailed description of the product functions, user characteristics, constraints, and specific requirements.</p>
+<h2 id="general-description">2. General Description</h2>
+<h3 id="product-perspective">2.1 Product Perspective</h3>
+<p>The Serial Terminal Application is a standalone software tool designed for users who need to establish serial communication with various devices for testing, debugging, or configuration purposes.</p>
+<h3 id="product-functions">2.2 Product Functions</h3>
+<ul>
+<li>Select and configure COM ports.</li>
+<li>Open and close serial connections.</li>
+<li>Send data through the serial port.</li>
+<li>Display incoming data in real-time.</li>
+<li>Highlight sent data in green in the terminal.</li>
+</ul>
+<h3 id="user-characteristics">2.3 User Characteristics</h3>
+<p>The users of the Serial Terminal Application are expected to have a basic understanding of serial communication and familiarity with the devices they intend to connect to.</p>
+<h3 id="general-constraints">2.4 General Constraints</h3>
+<ul>
+<li>The application must be compatible with Windows, Linux, and macOS.</li>
+<li>The application should not require administrative privileges to run.</li>
+</ul>
+<h3 id="assumptions-and-dependencies">2.5 Assumptions and Dependencies</h3>
+<ul>
+<li>It is assumed that the user’s computer has the necessary drivers installed for the COM ports to be recognized and used.</li>
+</ul>
+<h2 id="specific-requirements">3. Specific Requirements</h2>
+<h3 id="requirements-tables">3.0 Requirements Tables</h3>
+
+<table>
+<thead>
+<tr>
+<th>REQ_ID</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REQ_01</td>
+<td>Functional</td>
+<td>The application shall allow users to select a COM port from a list of available ports.</td>
+</tr>
+<tr>
+<td>REQ_02</td>
+<td>Functional</td>
+<td>The application shall allow users to select a baud rate from a predefined list.</td>
+</tr>
+<tr>
+<td>REQ_03</td>
+<td>Functional</td>
+<td>The application shall provide a button to open and close the selected COM port.</td>
+</tr>
+<tr>
+<td>REQ_04</td>
+<td>Functional</td>
+<td>The application shall display incoming serial data in a central text area.</td>
+</tr>
+<tr>
+<td>REQ_05</td>
+<td>Functional</td>
+<td>The application shall allow users to enter text to send over the serial connection.</td>
+</tr>
+<tr>
+<td>REQ_06</td>
+<td>Functional</td>
+<td>The application shall provide a button to send the entered text.</td>
+</tr>
+<tr>
+<td>REQ_07</td>
+<td>Functional</td>
+<td>Sent text shall be displayed in the terminal with a green color.</td>
+</tr>
+<tr>
+<td>REQ_08</td>
+<td>Non-Functional</td>
+<td>The application shall have a responsive UI that adapts to different screen sizes.</td>
+</tr>
+<tr>
+<td>REQ_09</td>
+<td>Performance</td>
+<td>The application shall display incoming data with no more than a 500ms delay.</td>
+</tr>
+<tr>
+<td>REQ_10</td>
+<td>Usability</td>
+<td>The application shall be easy to use, with a clear and intuitive interface.</td>
+</tr>
+</tbody>
+</table><h3 id="external-interface-requirements">3.1 External Interface Requirements</h3>
+<h4 id="user-interfaces">3.1.1 User Interfaces</h4>
+<p>The application will have a graphical user interface consisting of:</p>
+<ul>
+<li>Buttons for COM port selection, baud rate selection, opening/closing the port.</li>
+<li>A large text area for displaying incoming data.</li>
+<li>A text input field and a button for sending data.</li>
+</ul>
+<h4 id="hardware-interfaces">3.1.2 Hardware Interfaces</h4>
+<p>The application requires access to the computer’s serial ports.</p>
+<h4 id="software-interfaces">3.1.3 Software Interfaces</h4>
+<p>The application will be developed in a programming language that supports cross-platform development, such as Python, and will use libraries for serial communication and GUI development.</p>
+<h4 id="communications-interfaces">3.1.4 Communications Interfaces</h4>
+<p>The application communicates with devices via serial connections using selected COM ports and baud rates.</p>
+<h3 id="functional-requirements">3.2 Functional Requirements</h3>
+<p>As detailed in the Requirements Table.</p>
+<h3 id="performance-requirements">3.3 Performance Requirements</h3>
+<ul>
+<li>The application must handle real-time data transmission efficiently, with minimal latency.</li>
+<li>The application should be capable of running smoothly on low to mid-range hardware.</li>
+</ul>
+<h3 id="design-constraints">3.4 Design Constraints</h3>
+<ul>
+<li>The application must be developed with cross-platform compatibility in mind.</li>
+<li>The UI must be designed to be user-friendly and intuitive.</li>
+</ul>
+<h3 id="software-system-attributes">3.5 Software System Attributes</h3>
+<h4 id="reliability">3.5.1 Reliability</h4>
+<p>The application must provide stable and consistent performance during prolonged use.</p>
+<h4 id="availability">3.5.2 Availability</h4>
+<p>The application should be available for download from a reputable source and should run whenever the user needs it, without requiring continuous internet access.</p>
+<h4 id="security">3.5.3 Security</h4>
+<p>User data and communication must be handled securely, with no unauthorized access to the serial data.</p>
+<h4 id="maintainability">3.5.4 Maintainability</h4>
+<p>The application should be easy to update and maintain, with clear documentation for future developers.</p>
+<h4 id="portability">3.5.5 Portability</h4>
+<p>The application must be easily portable across Windows, Linux, and macOS platforms.</p>
+<h2 id="other-requirements">3.6 Other Requirements</h2>
+<p>N/A</p>
+<h2 id="supporting-information">4. Supporting Information</h2>
+<h3 id="table-of-contents">4.1 Table of Contents</h3>
+<p>(Generated automatically by document generation tools)</p>
+<h3 id="appendix-a-glossary">4.2 Appendix A: Glossary</h3>
+<p>(See Section 1.3)</p>
+<h3 id="appendix-b-analysis-models">4.3 Appendix B: Analysis Models</h3>
+<p>N/A</p>
+<h3 id="appendix-c-to-be-determined-list">4.4 Appendix C: To Be Determined List</h3>
+<ul>
+<li>Final list of supported baud rates.</li>
+<li>Specific libraries and frameworks to be used for development.</li>
+</ul>
+<h3 id="appendix-d-issues-list">4.5 Appendix D: Issues List</h3>
+<p>N/A</p>
+<h3 id="appendix-e-guidelines">4.6 Appendix E: Guidelines</h3>
+<ul>
+<li>Follow best practices for secure and efficient serial communication.</li>
+<li>Ensure the UI is accessible and intuitive for all users.</li>
+</ul>
+<h3 id="appendix-f-references">4.7 Appendix F: References</h3>
+<p>N/A</p>
+<h3 id="index">4.8 Index</h3>
+<p>(Generated automatically by document generation tools)</p>
+<hr>
+<h1 id="acceptance-testing-for-serial-terminal-application">Acceptance Testing for Serial Terminal Application</h1>
+<h2 id="introduction-1">1. Introduction</h2>
+<h3 id="purpose-1">1.1 Purpose</h3>
+<p>The purpose of this document is to outline the acceptance testing criteria and procedures for the Serial Terminal Application. This includes both user acceptance tests and performance acceptance tests to ensure the application meets all specified requirements and is ready for deployment.</p>
+<h3 id="scope-1">1.2 Scope</h3>
+<p>This document covers the acceptance testing phase of the Serial Terminal Application, focusing on validating the functionality, performance, and usability of the application against the defined requirements.</p>
+<h3 id="definitions-acronyms-and-abbreviations-1">1.3 Definitions, Acronyms, and Abbreviations</h3>
+<ul>
+<li><strong>COM Port</strong>: Communication Port, a serial port interface on computers for connecting peripherals.</li>
+<li><strong>GUI</strong>: Graphical User Interface.</li>
+</ul>
+<h3 id="references-1">1.4 References</h3>
+<p>N/A</p>
+<h3 id="overview-1">1.5 Overview</h3>
+<p>The document is structured to first present the acceptance criteria, followed by detailed test cases for user acceptance and performance. Supporting information and appendices provide additional context and documentation.</p>
+<h2 id="acceptance-criteria">2. Acceptance Criteria</h2>
+<h3 id="acceptance-tests-tables">2.0 Acceptance Tests Tables</h3>
+
+<table>
+<thead>
+<tr>
+<th>TEST_ID</th>
+<th>Type</th>
+<th>Description</th>
+<th>Traceability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACCEPTANCE_TEST_01</td>
+<td>Functional</td>
+<td>Verify that the application allows users to select a COM port from a list of available ports.</td>
+<td>REQ_01</td>
+</tr>
+<tr>
+<td>ACCEPTANCE_TEST_02</td>
+<td>Functional</td>
+<td>Verify that the application allows users to select a baud rate from a predefined list.</td>
+<td>REQ_02</td>
+</tr>
+<tr>
+<td>ACCEPTANCE_TEST_03</td>
+<td>Functional</td>
+<td>Verify that the application provides a button to open and close the selected COM port.</td>
+<td>REQ_03</td>
+</tr>
+<tr>
+<td>ACCEPTANCE_TEST_04</td>
+<td>Functional</td>
+<td>Verify that the application displays incoming serial data in a central text area.</td>
+<td>REQ_04</td>
+</tr>
+<tr>
+<td>ACCEPTANCE_TEST_05</td>
+<td>Functional</td>
+<td>Verify that the application allows users to enter text to send over the serial connection.</td>
+<td>REQ_05</td>
+</tr>
+<tr>
+<td>ACCEPTANCE_TEST_06</td>
+<td>Functional</td>
+<td>Verify that the application provides a button to send the entered text.</td>
+<td>REQ_06</td>
+</tr>
+<tr>
+<td>ACCEPTANCE_TEST_07</td>
+<td>Functional</td>
+<td>Verify that sent text is displayed in the terminal with a green color.</td>
+<td>REQ_07</td>
+</tr>
+<tr>
+<td>ACCEPTANCE_TEST_08</td>
+<td>Usability</td>
+<td>Verify that the application has a responsive UI that adapts to different screen sizes.</td>
+<td>REQ_08</td>
+</tr>
+<tr>
+<td>ACCEPTANCE_TEST_09</td>
+<td>Performance</td>
+<td>Verify that the application displays incoming data with no more than a 500ms delay.</td>
+<td>REQ_09</td>
+</tr>
+<tr>
+<td>ACCEPTANCE_TEST_10</td>
+<td>Usability</td>
+<td>Verify that the application is easy to use, with a clear and intuitive interface.</td>
+<td>REQ_10</td>
+</tr>
+</tbody>
+</table><h3 id="user-acceptance-tests">2.1 User Acceptance Tests</h3>
+<h4 id="test-case-1">2.1.1 Test Case 1</h4>
+<p><strong>Objective</strong>: Verify COM port selection functionality.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Launch the application.</li>
+<li>Click on the COM port selection dropdown.</li>
+<li>Select a COM port from the list.</li>
+</ol>
+<p><strong>Expected Result</strong>: The selected COM port should be displayed as the current selection.</p>
+<h4 id="test-case-2">2.1.2 Test Case 2</h4>
+<p><strong>Objective</strong>: Verify sending and displaying of sent text in green.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Open a COM port.</li>
+<li>Enter text in the send text input field.</li>
+<li>Click the send button.</li>
+</ol>
+<p><strong>Expected Result</strong>: The sent text should appear in the terminal area in green color.</p>
+<h4 id="test-case-3">2.1.3 Test Case 3</h4>
+<p><strong>Objective</strong>: Verify opening and closing of COM port.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Select a COM port.</li>
+<li>Click the open port button.</li>
+<li>Verify the port is open.</li>
+<li>Click the close port button.</li>
+</ol>
+<p><strong>Expected Result</strong>: The application should successfully open and then close the selected COM port.</p>
+<h3 id="performance-acceptance-tests">2.2 Performance Acceptance Tests</h3>
+<h4 id="test-case-1-1">2.2.1 Test Case 1</h4>
+<p><strong>Objective</strong>: Verify real-time data display performance.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Open a COM port with a connected device that sends data continuously.</li>
+<li>Observe the incoming data in the terminal area.</li>
+</ol>
+<p><strong>Expected Result</strong>: Incoming data should be displayed with no more than a 500ms delay.</p>
+<h4 id="test-case-2-1">2.2.2 Test Case 2</h4>
+<p><strong>Objective</strong>: Verify application responsiveness.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Resize the application window to various sizes.</li>
+<li>Navigate through all application features.</li>
+</ol>
+<p><strong>Expected Result</strong>: The application UI adapts to different sizes without lag or layout issues.</p>
+<h4 id="test-case-3-1">2.2.3 Test Case 3</h4>
+<p><strong>Objective</strong>: Verify application stability over extended use.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Open a COM port.</li>
+<li>Send and receive data continuously for 1 hour.</li>
+</ol>
+<p><strong>Expected Result</strong>: The application should not crash or become unresponsive during this period.</p>
+<h2 id="supporting-information-1">3. Supporting Information</h2>
+<h3 id="table-of-contents-1">3.1 Table of Contents</h3>
+<p>(Generated automatically by document generation tools)</p>
+<h3 id="appendix-a-test-cases">3.2 Appendix A: Test Cases</h3>
+<p>Detailed descriptions and procedures for each test case mentioned in Section 2.</p>
+<h3 id="appendix-b-references">3.3 Appendix B: References</h3>
+<p>N/A</p>
+<h3 id="index-1">3.4 Index</h3>
+<p>(Generated automatically by document generation tools)</p>
+<hr>
+<h1 id="architecture-for-serial-terminal-application">Architecture for Serial Terminal Application</h1>
+<h2 id="introduction-2">1. Introduction</h2>
+<h3 id="purpose-2">1.1 Purpose</h3>
+<p>The purpose of this document is to describe the architecture of the Serial Terminal Application, including its system and data architecture. This will provide a comprehensive overview of how the application is structured and operates.</p>
+<h3 id="scope-2">1.2 Scope</h3>
+<p>This document covers the architectural design of the Serial Terminal Application, focusing on its components, interactions, data flow, and storage mechanisms.</p>
+<h3 id="definitions-acronyms-and-abbreviations-2">1.3 Definitions, Acronyms, and Abbreviations</h3>
+<ul>
+<li><strong>GUI</strong>: Graphical User Interface</li>
+<li><strong>COM Port</strong>: Communication Port</li>
+</ul>
+<h3 id="references-2">1.4 References</h3>
+<p>N/A</p>
+<h3 id="overview-2">1.5 Overview</h3>
+<p>The document is structured to first present the system architecture, followed by the data architecture. Supporting diagrams and detailed descriptions of components and interactions are provided.</p>
+<h2 id="system-architecture">2. System Architecture</h2>
+<h3 id="system-architecture-diagrams">2.0 System Architecture Diagram/s</h3>
+<pre class=" language-mermaid"><svg id="mermaid-svg-9UXCx95Epaz3kBzK" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="433.03125" style="max-width: 363.546875px;" viewBox="0 0 363.546875 433.03125"><style>#mermaid-svg-9UXCx95Epaz3kBzK{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-9UXCx95Epaz3kBzK .error-icon{fill:#552222;}#mermaid-svg-9UXCx95Epaz3kBzK .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-9UXCx95Epaz3kBzK .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-9UXCx95Epaz3kBzK .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-9UXCx95Epaz3kBzK .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-9UXCx95Epaz3kBzK .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-9UXCx95Epaz3kBzK .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-9UXCx95Epaz3kBzK .marker{fill:#666;stroke:#666;}#mermaid-svg-9UXCx95Epaz3kBzK .marker.cross{stroke:#666;}#mermaid-svg-9UXCx95Epaz3kBzK svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-9UXCx95Epaz3kBzK .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-svg-9UXCx95Epaz3kBzK .cluster-label text{fill:#333;}#mermaid-svg-9UXCx95Epaz3kBzK .cluster-label span{color:#333;}#mermaid-svg-9UXCx95Epaz3kBzK .label text,#mermaid-svg-9UXCx95Epaz3kBzK span{fill:#000000;color:#000000;}#mermaid-svg-9UXCx95Epaz3kBzK .node rect,#mermaid-svg-9UXCx95Epaz3kBzK .node circle,#mermaid-svg-9UXCx95Epaz3kBzK .node ellipse,#mermaid-svg-9UXCx95Epaz3kBzK .node polygon,#mermaid-svg-9UXCx95Epaz3kBzK .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-svg-9UXCx95Epaz3kBzK .node .label{text-align:center;}#mermaid-svg-9UXCx95Epaz3kBzK .node.clickable{cursor:pointer;}#mermaid-svg-9UXCx95Epaz3kBzK .arrowheadPath{fill:#333333;}#mermaid-svg-9UXCx95Epaz3kBzK .edgePath .path{stroke:#666;stroke-width:1.5px;}#mermaid-svg-9UXCx95Epaz3kBzK .flowchart-link{stroke:#666;fill:none;}#mermaid-svg-9UXCx95Epaz3kBzK .edgeLabel{background-color:white;text-align:center;}#mermaid-svg-9UXCx95Epaz3kBzK .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-svg-9UXCx95Epaz3kBzK .cluster rect{fill:hsl(210,66.6666666667%,95%);stroke:#26a;stroke-width:1px;}#mermaid-svg-9UXCx95Epaz3kBzK .cluster text{fill:#333;}#mermaid-svg-9UXCx95Epaz3kBzK .cluster span{color:#333;}#mermaid-svg-9UXCx95Epaz3kBzK div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160,0%,93.3333333333%);border:1px solid #26a;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg-9UXCx95Epaz3kBzK:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-9UXCx95Epaz3kBzK flowchart{fill:apa;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-GUI LE-SerialControl" id="L-GUI-SerialControl" style="opacity: 1;"><path class="path" d="M158.63109671677216,54.71875L118.83203125,93.078125L118.83203125,131.4375" marker-end="url(https://stackedit.io/app#arrowhead69)" style="fill:none"></path><defs><marker id="arrowhead69" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-SerialControl LE-SerialPort" id="L-SerialControl-SerialPort" style="opacity: 1;"><path class="path" d="M143.18935423259495,178.15625L183.1875,216.515625L183.1875,254.875" marker-end="url(https://stackedit.io/app#arrowhead70)" style="fill:none"></path><defs><marker id="arrowhead70" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-SerialControl LE-DataDisplay" id="L-SerialControl-DataDisplay" style="opacity: 1;"><path class="path" d="M94.47470826740506,178.15625L54.4765625,216.515625L54.4765625,278.234375L54.4765625,339.953125L134.47285403481013,378.3125" marker-end="url(https://stackedit.io/app#arrowhead71)" style="fill:none"></path><defs><marker id="arrowhead71" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-SerialPort LE-DataDisplay" id="L-SerialPort-DataDisplay" style="opacity: 1;"><path class="path" d="M183.1875,301.59375L183.1875,339.953125L183.1875,378.3125" marker-end="url(https://stackedit.io/app#arrowhead72)" style="fill:none"></path><defs><marker id="arrowhead72" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-GUI LE-DataDisplay" id="L-GUI-DataDisplay" style="opacity: 1;"><path class="path" d="M231.4606012658228,54.71875L311.2578125,93.078125L311.2578125,154.796875L311.2578125,216.515625L311.2578125,278.234375L311.2578125,339.953125L231.6596815664557,378.3125" marker-end="url(https://stackedit.io/app#arrowhead73)" style="fill:none"></path><defs><marker id="arrowhead73" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(118.83203125,93.078125)" style="opacity: 1;"><g transform="translate(-57.8359375,-13.359375)" class="label"><rect rx="0" ry="0" width="115.671875" height="26.71875"></rect><foreignObject width="115.671875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-GUI-SerialControl" class="edgeLabel L-LS-GUI' L-LE-SerialControl">User Interaction</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(183.1875,216.515625)" style="opacity: 1;"><g transform="translate(-63.78125,-13.359375)" class="label"><rect rx="0" ry="0" width="127.5625" height="26.71875"></rect><foreignObject width="127.5625" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-SerialControl-SerialPort" class="edgeLabel L-LS-SerialControl' L-LE-SerialPort">Data Transmission</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(54.4765625,278.234375)" style="opacity: 1;"><g transform="translate(-46.4765625,-13.359375)" class="label"><rect rx="0" ry="0" width="92.953125" height="26.71875"></rect><foreignObject width="92.953125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-SerialControl-DataDisplay" class="edgeLabel L-LS-SerialControl' L-LE-DataDisplay">Receive Data</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(183.1875,339.953125)" style="opacity: 1;"><g transform="translate(-51.0546875,-13.359375)" class="label"><rect rx="0" ry="0" width="102.109375" height="26.71875"></rect><foreignObject width="102.109375" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-SerialPort-DataDisplay" class="edgeLabel L-LS-SerialPort' L-LE-DataDisplay">Incoming Data</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(311.2578125,216.515625)" style="opacity: 1;"><g transform="translate(-44.2890625,-13.359375)" class="label"><rect rx="0" ry="0" width="88.578125" height="26.71875"></rect><foreignObject width="88.578125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-GUI-DataDisplay" class="edgeLabel L-LS-GUI' L-LE-DataDisplay">Display Data</span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-GUI-342" transform="translate(182.8671875,31.359375)" style="opacity: 1;"><rect rx="0" ry="0" x="-57.9609375" y="-23.359375" width="115.921875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-47.9609375,-13.359375)"><foreignObject width="95.921875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">GUI Interface</div></foreignObject></g></g></g><g class="node default" id="flowchart-SerialControl-343" transform="translate(118.83203125,154.796875)" style="opacity: 1;"><rect rx="0" ry="0" x="-76.03125" y="-23.359375" width="152.0625" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-66.03125,-13.359375)"><foreignObject width="132.0625" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Serial Port Control</div></foreignObject></g></g></g><g class="node default" id="flowchart-SerialPort-345" transform="translate(183.1875,278.234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-47.234375" y="-23.359375" width="94.46875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-37.234375,-13.359375)"><foreignObject width="74.46875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Serial Port</div></foreignObject></g></g></g><g class="node default" id="flowchart-DataDisplay-347" transform="translate(183.1875,401.671875)" style="opacity: 1;"><rect rx="0" ry="0" x="-54.2890625" y="-23.359375" width="108.578125" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-44.2890625,-13.359375)"><foreignObject width="88.578125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Data Display</div></foreignObject></g></g></g></g></g></g></svg></pre>
+<h2 id="system-overview">2.1 System Overview</h2>
+<p>The Serial Terminal Application is divided into several key subsystems: the GUI Interface, Serial Port Control, and Data Display. These subsystems work together to facilitate communication with serial devices, user interaction, and data presentation.</p>
+<h2 id="subsystem-1-gui-interface">2.2 Subsystem 1: GUI Interface</h2>
+<h3 id="components">2.2.1 Components</h3>
+<ul>
+<li>COM Port Selection</li>
+<li>Baud Rate Selection</li>
+<li>Open/Close Port Button</li>
+<li>Send Text Input</li>
+<li>Send Button</li>
+</ul>
+<h3 id="interactions">2.2.2 Interactions</h3>
+<p>The GUI Interface allows the user to select COM ports, set baud rates, open/close ports, enter text to send, and initiate the sending process. It interacts directly with the Serial Port Control subsystem to relay user commands.</p>
+<h2 id="subsystem-2-serial-port-control">2.3 Subsystem 2: Serial Port Control</h2>
+<h3 id="components-1">2.3.1 Components</h3>
+<ul>
+<li>Serial Port Configuration</li>
+<li>Data Sender</li>
+<li>Data Receiver</li>
+</ul>
+<h3 id="interactions-1">2.3.2 Interactions</h3>
+<h4 id="interactions-diagrams">2.3.2.1 Interactions Diagram/s</h4>
+<pre class=" language-mermaid"><svg id="mermaid-svg-j7ZkahZ7qz00O5ac" width="100%" xmlns="http://www.w3.org/2000/svg" height="497" style="max-width: 729px;" viewBox="-50 -10 729 497"><style>#mermaid-svg-j7ZkahZ7qz00O5ac{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-j7ZkahZ7qz00O5ac .error-icon{fill:#552222;}#mermaid-svg-j7ZkahZ7qz00O5ac .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-j7ZkahZ7qz00O5ac .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-j7ZkahZ7qz00O5ac .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-j7ZkahZ7qz00O5ac .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-j7ZkahZ7qz00O5ac .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-j7ZkahZ7qz00O5ac .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-j7ZkahZ7qz00O5ac .marker{fill:#666;stroke:#666;}#mermaid-svg-j7ZkahZ7qz00O5ac .marker.cross{stroke:#666;}#mermaid-svg-j7ZkahZ7qz00O5ac svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-j7ZkahZ7qz00O5ac .actor{stroke:hsl(0,0%,83%);fill:#eee;}#mermaid-svg-j7ZkahZ7qz00O5ac text.actor > tspan{fill:#333;stroke:none;}#mermaid-svg-j7ZkahZ7qz00O5ac .actor-line{stroke:#666;}#mermaid-svg-j7ZkahZ7qz00O5ac .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#mermaid-svg-j7ZkahZ7qz00O5ac .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#mermaid-svg-j7ZkahZ7qz00O5ac #arrowhead path{fill:#333;stroke:#333;}#mermaid-svg-j7ZkahZ7qz00O5ac .sequenceNumber{fill:white;}#mermaid-svg-j7ZkahZ7qz00O5ac #sequencenumber{fill:#333;}#mermaid-svg-j7ZkahZ7qz00O5ac #crosshead path{fill:#333;stroke:#333;}#mermaid-svg-j7ZkahZ7qz00O5ac .messageText{fill:#333;stroke:#333;}#mermaid-svg-j7ZkahZ7qz00O5ac .labelBox{stroke:hsl(0,0%,83%);fill:#eee;}#mermaid-svg-j7ZkahZ7qz00O5ac .labelText,#mermaid-svg-j7ZkahZ7qz00O5ac .labelText > tspan{fill:#333;stroke:none;}#mermaid-svg-j7ZkahZ7qz00O5ac .loopText,#mermaid-svg-j7ZkahZ7qz00O5ac .loopText > tspan{fill:#333;stroke:none;}#mermaid-svg-j7ZkahZ7qz00O5ac .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:hsl(0,0%,83%);fill:hsl(0,0%,83%);}#mermaid-svg-j7ZkahZ7qz00O5ac .note{stroke:hsl(60,100%,23.3333333333%);fill:#ffa;}#mermaid-svg-j7ZkahZ7qz00O5ac .noteText,#mermaid-svg-j7ZkahZ7qz00O5ac .noteText > tspan{fill:#333;stroke:none;}#mermaid-svg-j7ZkahZ7qz00O5ac .activation0{fill:#f4f4f4;stroke:#666;}#mermaid-svg-j7ZkahZ7qz00O5ac .activation1{fill:#f4f4f4;stroke:#666;}#mermaid-svg-j7ZkahZ7qz00O5ac .activation2{fill:#f4f4f4;stroke:#666;}#mermaid-svg-j7ZkahZ7qz00O5ac:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-j7ZkahZ7qz00O5ac sequence{fill:apa;}</style><g></g><g><line id="actor12" x1="75" y1="5" x2="75" y2="486" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="75" dy="0">GUI Interface</tspan></text></g><g><line id="actor13" x1="354" y1="5" x2="354" y2="486" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="279" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="354" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="354" dy="0">Serial Port Control</tspan></text></g><g><line id="actor14" x1="554" y1="5" x2="554" y2="486" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="479" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="554" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="554" dy="0">Serial Port</tspan></text></g><defs><marker id="arrowhead" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" stroke-width="1px" d="M 9,2 V 6 L16,4 Z" style="stroke-dasharray: 0, 0;"></path><path fill="none" stroke="#000000" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><defs><marker id="filled-head" refX="18" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker id="sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto"><circle cx="15" cy="15" r="6"></circle></marker></defs><text x="215" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Select COM Port &amp; Baud Rate</text><line x1="75" y1="113" x2="354" y2="113" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="215" y="128" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Open/Close Port</text><line x1="75" y1="161" x2="354" y2="161" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="215" y="176" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Send Data</text><line x1="75" y1="209" x2="354" y2="209" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="454" y="224" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Configure Port</text><line x1="354" y1="257" x2="554" y2="257" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="454" y="272" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Transmit Data</text><line x1="354" y1="305" x2="554" y2="305" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="454" y="320" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Receive Data</text><line x1="554" y1="353" x2="354" y2="353" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="215" y="368" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Display Incoming Data</text><line x1="354" y1="401" x2="75" y2="401" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><g><rect x="0" y="421" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="453.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="75" dy="0">GUI Interface</tspan></text></g><g><rect x="279" y="421" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="354" y="453.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="354" dy="0">Serial Port Control</tspan></text></g><g><rect x="479" y="421" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="554" y="453.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="554" dy="0">Serial Port</tspan></text></g></svg></pre>
+<p>The Serial Port Control subsystem is responsible for configuring the serial port based on user selections, sending data to the serial port, and receiving data from it. It serves as the intermediary between the GUI Interface and the actual Serial Port.</p>
+<h2 id="data-architecture">3. Data Architecture</h2>
+<h3 id="data-architecture-diagrams">3.0 Data Architecture Diagram/s</h3>
+<pre class=" language-mermaid"><svg id="mermaid-svg-3NfRamQwoTnelbBv" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="159.4375" style="max-width: 685.484375px;" viewBox="0 0 685.484375 159.4375"><style>#mermaid-svg-3NfRamQwoTnelbBv{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-3NfRamQwoTnelbBv .error-icon{fill:#552222;}#mermaid-svg-3NfRamQwoTnelbBv .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-3NfRamQwoTnelbBv .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-3NfRamQwoTnelbBv .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-3NfRamQwoTnelbBv .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-3NfRamQwoTnelbBv .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-3NfRamQwoTnelbBv .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-3NfRamQwoTnelbBv .marker{fill:#666;stroke:#666;}#mermaid-svg-3NfRamQwoTnelbBv .marker.cross{stroke:#666;}#mermaid-svg-3NfRamQwoTnelbBv svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-3NfRamQwoTnelbBv .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-svg-3NfRamQwoTnelbBv .cluster-label text{fill:#333;}#mermaid-svg-3NfRamQwoTnelbBv .cluster-label span{color:#333;}#mermaid-svg-3NfRamQwoTnelbBv .label text,#mermaid-svg-3NfRamQwoTnelbBv span{fill:#000000;color:#000000;}#mermaid-svg-3NfRamQwoTnelbBv .node rect,#mermaid-svg-3NfRamQwoTnelbBv .node circle,#mermaid-svg-3NfRamQwoTnelbBv .node ellipse,#mermaid-svg-3NfRamQwoTnelbBv .node polygon,#mermaid-svg-3NfRamQwoTnelbBv .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-svg-3NfRamQwoTnelbBv .node .label{text-align:center;}#mermaid-svg-3NfRamQwoTnelbBv .node.clickable{cursor:pointer;}#mermaid-svg-3NfRamQwoTnelbBv .arrowheadPath{fill:#333333;}#mermaid-svg-3NfRamQwoTnelbBv .edgePath .path{stroke:#666;stroke-width:1.5px;}#mermaid-svg-3NfRamQwoTnelbBv .flowchart-link{stroke:#666;fill:none;}#mermaid-svg-3NfRamQwoTnelbBv .edgeLabel{background-color:white;text-align:center;}#mermaid-svg-3NfRamQwoTnelbBv .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-svg-3NfRamQwoTnelbBv .cluster rect{fill:hsl(210,66.6666666667%,95%);stroke:#26a;stroke-width:1px;}#mermaid-svg-3NfRamQwoTnelbBv .cluster text{fill:#333;}#mermaid-svg-3NfRamQwoTnelbBv .cluster span{color:#333;}#mermaid-svg-3NfRamQwoTnelbBv div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160,0%,93.3333333333%);border:1px solid #26a;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg-3NfRamQwoTnelbBv:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-3NfRamQwoTnelbBv flowchart{fill:apa;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-UserInput LE-DataSender" id="L-UserInput-DataSender" style="opacity: 1;"><path class="path" d="M139.609375,31.359375L215.6640625,31.359375L297.8984375,31.359375" marker-end="url(https://stackedit.io/app#arrowhead74)" style="fill:none"></path><defs><marker id="arrowhead74" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-SerialPort LE-DataReceiver" id="L-SerialPort-DataReceiver" style="opacity: 1;"><path class="path" d="M121.0390625,128.078125L215.6640625,128.078125L291.71875,128.078125" marker-end="url(https://stackedit.io/app#arrowhead75)" style="fill:none"></path><defs><marker id="arrowhead75" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-DataReceiver LE-DataDisplay" id="L-DataReceiver-DataDisplay" style="opacity: 1;"><path class="path" d="M410.890625,128.078125L489.8984375,128.078125L568.90625,128.078125" marker-end="url(https://stackedit.io/app#arrowhead76)" style="fill:none"></path><defs><marker id="arrowhead76" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(215.6640625,31.359375)" style="opacity: 1;"><g transform="translate(-34.0859375,-13.359375)" class="label"><rect rx="0" ry="0" width="68.171875" height="26.71875"></rect><foreignObject width="68.171875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-UserInput-DataSender" class="edgeLabel L-LS-UserInput' L-LE-DataSender">Text Data</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(215.6640625,128.078125)" style="opacity: 1;"><g transform="translate(-51.0546875,-13.359375)" class="label"><rect rx="0" ry="0" width="102.109375" height="26.71875"></rect><foreignObject width="102.109375" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-SerialPort-DataReceiver" class="edgeLabel L-LS-SerialPort' L-LE-DataReceiver">Incoming Data</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(489.8984375,128.078125)" style="opacity: 1;"><g transform="translate(-54.0078125,-13.359375)" class="label"><rect rx="0" ry="0" width="108.015625" height="26.71875"></rect><foreignObject width="108.015625" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-DataReceiver-DataDisplay" class="edgeLabel L-LS-DataReceiver' L-LE-DataDisplay">Processed Data</span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-UserInput-358" transform="translate(73.8046875,31.359375)" style="opacity: 1;"><rect rx="0" ry="0" x="-65.8046875" y="-23.359375" width="131.609375" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-55.8046875,-13.359375)"><foreignObject width="111.609375" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">User Input Data</div></foreignObject></g></g></g><g class="node default" id="flowchart-DataSender-359" transform="translate(351.3046875,31.359375)" style="opacity: 1;"><rect rx="0" ry="0" x="-53.40625" y="-23.359375" width="106.8125" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-43.40625,-13.359375)"><foreignObject width="86.8125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Data Sender</div></foreignObject></g></g></g><g class="node default" id="flowchart-SerialPort-360" transform="translate(73.8046875,128.078125)" style="opacity: 1;"><rect rx="0" ry="0" x="-47.234375" y="-23.359375" width="94.46875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-37.234375,-13.359375)"><foreignObject width="74.46875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Serial Port</div></foreignObject></g></g></g><g class="node default" id="flowchart-DataReceiver-361" transform="translate(351.3046875,128.078125)" style="opacity: 1;"><rect rx="0" ry="0" x="-59.5859375" y="-23.359375" width="119.171875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-49.5859375,-13.359375)"><foreignObject width="99.171875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Data Receiver</div></foreignObject></g></g></g><g class="node default" id="flowchart-DataDisplay-363" transform="translate(623.1953125,128.078125)" style="opacity: 1;"><rect rx="0" ry="0" x="-54.2890625" y="-23.359375" width="108.578125" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-44.2890625,-13.359375)"><foreignObject width="88.578125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Data Display</div></foreignObject></g></g></g></g></g></g></svg></pre>
+<h2 id="data-flow">3.1 Data Flow</h2>
+<p>Data flow in the Serial Terminal Application involves user input data being sent through the serial port to a connected device and incoming data from the device being received and displayed to the user.</p>
+<h2 id="data-storage">3.2 Data Storage</h2>
+<p>The application does not persistently store data but temporarily holds user input and incoming data for processing and display.</p>
+<h2 id="data-access">3.3 Data Access</h2>
+<p>Data access is primarily in real-time, with the application accessing user input data for sending and processing incoming data for display as it is received.</p>
+<h2 id="supporting-information-2">4. Supporting Information</h2>
+<h3 id="table-of-contents-2">4.1 Table of Contents</h3>
+<p>(Generated automatically by document generation tools)</p>
+<h3 id="appendix-a-diagrams">4.2 Appendix A: Diagrams</h3>
+<ul>
+<li>System Architecture Diagram</li>
+<li>Interactions Diagram</li>
+<li>Data Architecture Diagram</li>
+</ul>
+<h3 id="appendix-b-references-1">4.3 Appendix B: References</h3>
+<p>N/A</p>
+<h3 id="index-2">4.4 Index</h3>
+<p>(Generated automatically by document generation tools)</p>
+<hr>
+<h1 id="system-testing-for-serial-terminal-application">System Testing for Serial Terminal Application</h1>
+<h2 id="introduction-3">1. Introduction</h2>
+<h3 id="purpose-3">1.1 Purpose</h3>
+<p>The purpose of this document is to outline the system testing procedures for the Serial Terminal Application. It aims to ensure that the application meets its specified requirements and functions correctly in its intended environment.</p>
+<h3 id="scope-3">1.2 Scope</h3>
+<p>This document covers the system testing phase of the Serial Terminal Application, detailing the test cases designed to validate the functionality, performance, and reliability of the application.</p>
+<h3 id="definitions-acronyms-and-abbreviations-3">1.3 Definitions, Acronyms, and Abbreviations</h3>
+<ul>
+<li><strong>GUI</strong>: Graphical User Interface</li>
+<li><strong>COM Port</strong>: Communication Port</li>
+</ul>
+<h3 id="references-3">1.4 References</h3>
+<p>N/A</p>
+<h3 id="overview-3">1.5 Overview</h3>
+<p>The document is structured to present test cases, followed by the expected test results. Supporting information and appendices provide additional context and documentation.</p>
+<h2 id="test-cases">2. Test Cases</h2>
+<h3 id="test-cases-table">2.0 Test Cases Table</h3>
+
+<table>
+<thead>
+<tr>
+<th>TEST_ID</th>
+<th>Type</th>
+<th>Description</th>
+<th>Traceability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYSTEM_TEST_01</td>
+<td>Functional</td>
+<td>Verify that all GUI elements are responsive and correctly formatted on different screen sizes.</td>
+<td>REQ_08</td>
+</tr>
+<tr>
+<td>SYSTEM_TEST_02</td>
+<td>Functional</td>
+<td>Test the application’s ability to open and close COM ports without errors.</td>
+<td>REQ_03</td>
+</tr>
+<tr>
+<td>SYSTEM_TEST_03</td>
+<td>Functional</td>
+<td>Validate the sending and receiving of data over the serial port, including the correct display of sent data in green.</td>
+<td>REQ_05, REQ_07</td>
+</tr>
+</tbody>
+</table><h3 id="test-case-1-gui-responsiveness-and-formatting">2.1 Test Case 1: GUI Responsiveness and Formatting</h3>
+<p><strong>Objective</strong>: Ensure that the GUI is responsive and elements are correctly formatted across different screen sizes.</p>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>
+<p>Launch the application on a device with a standard screen size.</p>
+</li>
+<li>
+<p>Resize the application window to various dimensions.</p>
+</li>
+<li>
+<p>Observe the responsiveness and formatting of GUI elements.</p>
+</li>
+</ol>
+<p><strong>Expected Result</strong>: All GUI elements should remain accessible and correctly formatted regardless of the window size.</p>
+<h3 id="test-case-2-opening-and-closing-com-ports">2.2 Test Case 2: Opening and Closing COM Ports</h3>
+<p><strong>Objective</strong>: Test the application’s functionality for opening and closing COM ports.</p>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>Launch the application.</li>
+<li>Select a COM port from the available list.</li>
+<li>Use the application to open the selected COM port.</li>
+<li>Close the COM port using the application.</li>
+</ol>
+<p><strong>Expected Result</strong>: The application should successfully open and then close the selected COM port without any errors.</p>
+<h3 id="test-case-3-sending-and-receiving-data">2.3 Test Case 3: Sending and Receiving Data</h3>
+<p><strong>Objective</strong>: Validate the application’s ability to send data over the serial port and display incoming data, including highlighting sent data in green.</p>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>Connect a device to the selected COM port that can send back received data (echo functionality).</li>
+<li>Open the COM port using the application.</li>
+<li>Send a string of text from the application.</li>
+<li>Observe the received data in the application’s display area.</li>
+</ol>
+<p><strong>Expected Result</strong>: The sent text should appear in the display area highlighted in green, and the echoed back text should also be displayed.</p>
+<h2 id="test-results-expected">3. Test Results (Expected)</h2>
+<h3 id="test-case-1-results">3.1 Test Case 1 Results</h3>
+<p>All GUI elements were responsive and correctly formatted across a variety of screen sizes, meeting the requirements specified in REQ_08.</p>
+<h3 id="test-case-2-results">3.2 Test Case 2 Results</h3>
+<p>The application successfully opened and closed the selected COM port without any errors, fulfilling the requirement specified in REQ_03.</p>
+<h3 id="test-case-3-results">3.3 Test Case 3 Results</h3>
+<p>The application correctly sent data over the serial port and displayed incoming data. Sent data was appropriately highlighted in green, confirming the requirements specified in REQ_05 and REQ_07 were met.</p>
+<h2 id="supporting-information-3">4. Supporting Information</h2>
+<h3 id="table-of-contents-3">4.1 Table of Contents</h3>
+<p>(Generated automatically by document generation tools)</p>
+<h3 id="appendix-a-test-cases-1">4.2 Appendix A: Test Cases</h3>
+<p>Detailed descriptions and procedures for each test case mentioned in Section 2.</p>
+<h3 id="appendix-b-references-2">4.3 Appendix B: References</h3>
+<p>N/A</p>
+<h3 id="index-3">4.4 Index</h3>
+<p>(Generated automatically by document generation tools)</p>
+<hr>
+<h1 id="high-level-design-for-serial-terminal-application">High Level Design for Serial Terminal Application</h1>
+<h2 id="introduction-4">1. Introduction</h2>
+<h3 id="purpose-4">1.1 Purpose</h3>
+<p>The purpose of this document is to provide a high-level overview of the Serial Terminal Application’s design. It outlines the major components and their interactions, providing a clear picture of how the application functions as a whole.</p>
+<h3 id="scope-4">1.2 Scope</h3>
+<p>This document covers the high-level design aspects of the Serial Terminal Application, including its architecture, major components, and their interactions. It is intended for use by the development team, project stakeholders, and any other parties involved in the development process.</p>
+<h3 id="definitions-acronyms-and-abbreviations-4">1.3 Definitions, Acronyms, and Abbreviations</h3>
+<ul>
+<li><strong>GUI</strong>: Graphical User Interface</li>
+<li><strong>COM Port</strong>: Communication Port, a serial port interface on computers for connecting peripherals.</li>
+</ul>
+<h3 id="references-4">1.4 References</h3>
+<p>N/A</p>
+<h3 id="overview-4">1.5 Overview</h3>
+<p>The remainder of this document provides a system overview, including diagrams and descriptions of the major components and their interactions, followed by supporting information.</p>
+<h2 id="system-overview-1">2. System Overview</h2>
+<h3 id="system-overview-diagrams">2.0 System Overview Diagram/s</h3>
+<pre class=" language-mermaid"><svg id="mermaid-svg-gfNTYLWCFV0Nrkvv" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="433.03125" style="max-width: 394.0859375px;" viewBox="0 0 394.0859375 433.03125"><style>#mermaid-svg-gfNTYLWCFV0Nrkvv{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-gfNTYLWCFV0Nrkvv .error-icon{fill:#552222;}#mermaid-svg-gfNTYLWCFV0Nrkvv .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-gfNTYLWCFV0Nrkvv .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-gfNTYLWCFV0Nrkvv .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-gfNTYLWCFV0Nrkvv .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-gfNTYLWCFV0Nrkvv .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-gfNTYLWCFV0Nrkvv .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-gfNTYLWCFV0Nrkvv .marker{fill:#666;stroke:#666;}#mermaid-svg-gfNTYLWCFV0Nrkvv .marker.cross{stroke:#666;}#mermaid-svg-gfNTYLWCFV0Nrkvv svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-gfNTYLWCFV0Nrkvv .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-svg-gfNTYLWCFV0Nrkvv .cluster-label text{fill:#333;}#mermaid-svg-gfNTYLWCFV0Nrkvv .cluster-label span{color:#333;}#mermaid-svg-gfNTYLWCFV0Nrkvv .label text,#mermaid-svg-gfNTYLWCFV0Nrkvv span{fill:#000000;color:#000000;}#mermaid-svg-gfNTYLWCFV0Nrkvv .node rect,#mermaid-svg-gfNTYLWCFV0Nrkvv .node circle,#mermaid-svg-gfNTYLWCFV0Nrkvv .node ellipse,#mermaid-svg-gfNTYLWCFV0Nrkvv .node polygon,#mermaid-svg-gfNTYLWCFV0Nrkvv .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-svg-gfNTYLWCFV0Nrkvv .node .label{text-align:center;}#mermaid-svg-gfNTYLWCFV0Nrkvv .node.clickable{cursor:pointer;}#mermaid-svg-gfNTYLWCFV0Nrkvv .arrowheadPath{fill:#333333;}#mermaid-svg-gfNTYLWCFV0Nrkvv .edgePath .path{stroke:#666;stroke-width:1.5px;}#mermaid-svg-gfNTYLWCFV0Nrkvv .flowchart-link{stroke:#666;fill:none;}#mermaid-svg-gfNTYLWCFV0Nrkvv .edgeLabel{background-color:white;text-align:center;}#mermaid-svg-gfNTYLWCFV0Nrkvv .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-svg-gfNTYLWCFV0Nrkvv .cluster rect{fill:hsl(210,66.6666666667%,95%);stroke:#26a;stroke-width:1px;}#mermaid-svg-gfNTYLWCFV0Nrkvv .cluster text{fill:#333;}#mermaid-svg-gfNTYLWCFV0Nrkvv .cluster span{color:#333;}#mermaid-svg-gfNTYLWCFV0Nrkvv div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160,0%,93.3333333333%);border:1px solid #26a;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg-gfNTYLWCFV0Nrkvv:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-gfNTYLWCFV0Nrkvv flowchart{fill:apa;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-GUI LE-SerialManager" id="L-GUI-SerialManager" style="opacity: 1;"><path class="path" d="M196.72738330696203,54.71875L147.35546875,93.078125L147.35546875,131.4375" marker-end="url(https://stackedit.io/app#arrowhead77)" style="fill:none"></path><defs><marker id="arrowhead77" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-SerialManager LE-SerialPort" id="L-SerialManager-SerialPort" style="opacity: 1;"><path class="path" d="M120.9194570806962,178.15625L77.5078125,216.515625L77.5078125,254.875" marker-end="url(https://stackedit.io/app#arrowhead78)" style="fill:none"></path><defs><marker id="arrowhead78" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-SerialManager LE-DataProcessor" id="L-SerialManager-DataProcessor" style="opacity: 1;"><path class="path" d="M177.5999456091772,178.15625L227.265625,216.515625L276.637539556962,254.875" marker-end="url(https://stackedit.io/app#arrowhead79)" style="fill:none"></path><defs><marker id="arrowhead79" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-DataProcessor LE-GUI" id="L-DataProcessor-GUI" style="opacity: 1;"><path class="path" d="M319.9854430379747,254.875L341.796875,216.515625L341.796875,154.796875L341.796875,93.078125L270.3197636471519,54.71875" marker-end="url(https://stackedit.io/app#arrowhead80)" style="fill:none"></path><defs><marker id="arrowhead80" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-SerialPort LE-ExternalDevice" id="L-SerialPort-ExternalDevice" style="opacity: 1;"><path class="path" d="M77.5078125,301.59375L77.5078125,339.953125L77.5078125,378.3125" marker-end="url(https://stackedit.io/app#arrowhead81)" style="fill:none"></path><defs><marker id="arrowhead81" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(147.35546875,93.078125)" style="opacity: 1;"><g transform="translate(-57.8359375,-13.359375)" class="label"><rect rx="0" ry="0" width="115.671875" height="26.71875"></rect><foreignObject width="115.671875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-GUI-SerialManager" class="edgeLabel L-LS-GUI' L-LE-SerialManager">User Interaction</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(77.5078125,216.515625)" style="opacity: 1;"><g transform="translate(-69.5078125,-13.359375)" class="label"><rect rx="0" ry="0" width="139.015625" height="26.71875"></rect><foreignObject width="139.015625" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-SerialManager-SerialPort" class="edgeLabel L-LS-SerialManager' L-LE-SerialPort">Manage Connection</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(227.265625,216.515625)" style="opacity: 1;"><g transform="translate(-50.1875,-13.359375)" class="label"><rect rx="0" ry="0" width="100.375" height="26.71875"></rect><foreignObject width="100.375" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-SerialManager-DataProcessor" class="edgeLabel L-LS-SerialManager' L-LE-DataProcessor">Data Handling</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(341.796875,154.796875)" style="opacity: 1;"><g transform="translate(-44.2890625,-13.359375)" class="label"><rect rx="0" ry="0" width="88.578125" height="26.71875"></rect><foreignObject width="88.578125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-DataProcessor-GUI" class="edgeLabel L-LS-DataProcessor' L-LE-GUI">Display Data</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(77.5078125,339.953125)" style="opacity: 1;"><g transform="translate(-67.7109375,-13.359375)" class="label"><rect rx="0" ry="0" width="135.421875" height="26.71875"></rect><foreignObject width="135.421875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-SerialPort-ExternalDevice" class="edgeLabel L-LS-SerialPort' L-LE-ExternalDevice">Send/Receive Data</span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-GUI-374" transform="translate(226.79296875,31.359375)" style="opacity: 1;"><rect rx="0" ry="0" x="-57.9609375" y="-23.359375" width="115.921875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-47.9609375,-13.359375)"><foreignObject width="95.921875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">GUI Interface</div></foreignObject></g></g></g><g class="node default" id="flowchart-SerialManager-375" transform="translate(147.35546875,154.796875)" style="opacity: 1;"><rect rx="0" ry="0" x="-79.5859375" y="-23.359375" width="159.171875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-69.5859375,-13.359375)"><foreignObject width="139.171875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Serial Port Manager</div></foreignObject></g></g></g><g class="node default" id="flowchart-SerialPort-377" transform="translate(77.5078125,278.234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-47.234375" y="-23.359375" width="94.46875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-37.234375,-13.359375)"><foreignObject width="74.46875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Serial Port</div></foreignObject></g></g></g><g class="node default" id="flowchart-DataProcessor-379" transform="translate(306.703125,278.234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-62.5859375" y="-23.359375" width="125.171875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-52.5859375,-13.359375)"><foreignObject width="105.171875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Data Processor</div></foreignObject></g></g></g><g class="node default" id="flowchart-ExternalDevice-383" transform="translate(77.5078125,401.671875)" style="opacity: 1;"><rect rx="0" ry="0" x="-66.078125" y="-23.359375" width="132.15625" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-56.078125,-13.359375)"><foreignObject width="112.15625" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">External Device</div></foreignObject></g></g></g></g></g></g></svg></pre>
+<h2 id="major-components">2.1 Major Components</h2>
+<h3 id="component-1-gui-interface">2.1.1 Component 1: GUI Interface</h3>
+<p>The GUI Interface is the front-end of the application through which the user interacts. It includes elements for COM port selection, baud rate configuration, opening/closing ports, sending data, and displaying incoming data.</p>
+<h3 id="component-2-serial-port-manager">2.1.2 Component 2: Serial Port Manager</h3>
+<p>The Serial Port Manager is responsible for handling the opening and closing of COM ports, configuring the connection settings (e.g., baud rate), and managing the sending and receiving of data.</p>
+<h2 id="interactions-2">2.2 Interactions</h2>
+<h3 id="interaction-1-user-configures-connection">2.2.1 Interaction 1: User Configures Connection</h3>
+<p>The user selects the desired COM port and baud rate through the GUI Interface. The GUI Interface communicates these settings to the Serial Port Manager, which applies the configuration to the Serial Port.</p>
+<h3 id="interaction-2-sending-and-receiving-data">2.2.2 Interaction 2: Sending and Receiving Data</h3>
+<ul>
+<li><strong>Sending Data</strong>: The user enters data to send in the GUI Interface and initiates the send action. The GUI Interface passes the data to the Serial Port Manager, which sends it through the Serial Port to the connected External Device.</li>
+<li><strong>Receiving Data</strong>: Data received from the External Device through the Serial Port is handled by the Serial Port Manager, which processes the data (if necessary) and then passes it to the GUI Interface for display.</li>
+</ul>
+<h2 id="supporting-information-4">3. Supporting Information</h2>
+<h3 id="table-of-contents-4">3.1 Table of Contents</h3>
+<p>(Generated automatically by document generation tools)</p>
+<h3 id="appendix-a-diagrams-1">3.2 Appendix A: Diagrams</h3>
+<ul>
+<li>System Overview Diagram</li>
+</ul>
+<h3 id="appendix-b-references-3">3.3 Appendix B: References</h3>
+<p>N/A</p>
+<h3 id="index-4">3.4 Index</h3>
+<p>(Generated automatically by document generation tools)</p>
+<hr>
+<h1 id="integration-testing-for-serial-terminal-application">Integration Testing for Serial Terminal Application</h1>
+<h2 id="introduction-5">1. Introduction</h2>
+<h3 id="purpose-5">1.1 Purpose</h3>
+<p>The purpose of this document is to outline the integration testing strategy for the Serial Terminal Application. It aims to ensure that the application’s components interact correctly and perform their intended functions when integrated.</p>
+<h3 id="scope-5">1.2 Scope</h3>
+<p>This document covers the integration testing phase of the Serial Terminal Application, detailing the test cases designed to validate the interactions between the application’s major components.</p>
+<h3 id="definitions-acronyms-and-abbreviations-5">1.3 Definitions, Acronyms, and Abbreviations</h3>
+<ul>
+<li><strong>GUI</strong>: Graphical User Interface</li>
+<li><strong>COM Port</strong>: Communication Port</li>
+</ul>
+<h3 id="references-5">1.4 References</h3>
+<p>N/A</p>
+<h3 id="overview-5">1.5 Overview</h3>
+<p>The document is structured to present test cases, followed by the expected test results. Supporting information and appendices provide additional context and documentation.</p>
+<h2 id="test-cases-1">2. Test Cases</h2>
+
+<table>
+<thead>
+<tr>
+<th>TEST_ID</th>
+<th>Type</th>
+<th>Description</th>
+<th>Traceability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INTEGRATION_TEST_01</td>
+<td>Interaction</td>
+<td>Verify the interaction between the GUI Interface and the Serial Port Manager for COM port selection.</td>
+<td>REQ_01</td>
+</tr>
+<tr>
+<td>INTEGRATION_TEST_02</td>
+<td>Interaction</td>
+<td>Test the data flow from the GUI Interface through the Serial Port Manager to the Serial Port and back.</td>
+<td>REQ_05, REQ_07</td>
+</tr>
+<tr>
+<td>INTEGRATION_TEST_03</td>
+<td>Interaction</td>
+<td>Ensure the correct display of incoming and outgoing data in the GUI Interface.</td>
+<td>REQ_04, REQ_07</td>
+</tr>
+</tbody>
+</table><h3 id="test-case-1-com-port-selection-interaction">2.1 Test Case 1: COM Port Selection Interaction</h3>
+<p><strong>Objective</strong>: Ensure that the COM port selection in the GUI Interface correctly configures the Serial Port Manager.</p>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>Launch the application.</li>
+<li>Select a COM port from the GUI Interface.</li>
+<li>Verify that the Serial Port Manager configures the selected COM port.</li>
+</ol>
+<p><strong>Expected Result</strong>: The Serial Port Manager should reflect the COM port selected in the GUI Interface.</p>
+<h3 id="test-case-2-data-flow-verification">2.2 Test Case 2: Data Flow Verification</h3>
+<p><strong>Objective</strong>: Test the complete data flow from sending data in the GUI Interface to receiving echoed data back.</p>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>Connect a device that echoes received data to the selected COM port.</li>
+<li>Open the COM port and send data from the GUI Interface.</li>
+<li>Observe the echoed data received and displayed in the GUI Interface.</li>
+</ol>
+<p><strong>Expected Result</strong>: Data sent from the GUI Interface should be transmitted through the Serial Port Manager and Serial Port, received back, and displayed correctly in the GUI Interface.</p>
+<h3 id="test-case-3-display-of-incoming-and-outgoing-data">2.3 Test Case 3: Display of Incoming and Outgoing Data</h3>
+<p><strong>Objective</strong>: Ensure that both incoming and outgoing data are correctly displayed in the GUI Interface, with outgoing data highlighted in green.</p>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>Send data from the GUI Interface.</li>
+<li>Receive data from the connected device.</li>
+<li>Observe the display of both incoming and outgoing data in the GUI Interface.</li>
+</ol>
+<p><strong>Expected Result</strong>: Outgoing data should be highlighted in green, and all data should be displayed correctly in the GUI Interface.</p>
+<h2 id="test-results-expected-1">3. Test Results (Expected)</h2>
+<h3 id="test-case-1-results-1">3.1 Test Case 1 Results</h3>
+<p>The COM port selection in the GUI Interface was successfully reflected in the Serial Port Manager, indicating correct integration between these components.</p>
+<h3 id="test-case-2-results-1">3.2 Test Case 2 Results</h3>
+<p>The data flow from the GUI Interface through the Serial Port Manager to the Serial Port and back was verified successfully, with echoed data correctly displayed in the GUI Interface.</p>
+<h3 id="test-case-3-results-1">3.3 Test Case 3 Results</h3>
+<p>Both incoming and outgoing data were correctly displayed in the GUI Interface, with outgoing data appropriately highlighted in green, confirming the correct integration and interaction of the components.</p>
+<h2 id="supporting-information-5">4. Supporting Information</h2>
+<h3 id="table-of-contents-5">4.1 Table of Contents</h3>
+<p>(Generated automatically by document generation tools)</p>
+<h3 id="appendix-a-test-cases-2">4.2 Appendix A: Test Cases</h3>
+<p>Detailed descriptions and procedures for each test case mentioned in Section 2.</p>
+<h3 id="appendix-b-references-4">4.3 Appendix B: References</h3>
+<p>N/A</p>
+<h3 id="index-5">4.4 Index</h3>
+<p>(Generated automatically by document generation tools)</p>
+<hr>
+<h1 id="low-level-design-for-serial-terminal-application">Low Level Design for Serial Terminal Application</h1>
+<h2 id="introduction-6">1. Introduction</h2>
+<h3 id="purpose-6">1.1 Purpose</h3>
+<p>The purpose of this document is to detail the low-level design of the Serial Terminal Application. It focuses on the internal structure of the application’s components and modules, providing a comprehensive view of how the application is built from the ground up.</p>
+<h3 id="scope-6">1.2 Scope</h3>
+<p>This document covers the detailed design of each component within the Serial Terminal Application, including diagrams and descriptions of modules and their interactions.</p>
+<h3 id="definitions-acronyms-and-abbreviations-6">1.3 Definitions, Acronyms, and Abbreviations</h3>
+<ul>
+<li><strong>GUI</strong>: Graphical User Interface</li>
+<li><strong>COM Port</strong>: Communication Port</li>
+</ul>
+<h3 id="references-6">1.4 References</h3>
+<p>N/A</p>
+<h3 id="overview-6">1.5 Overview</h3>
+<p>The document is structured to first present component diagrams, followed by detailed descriptions of each component and its constituent modules. Supporting information and appendices provide additional context and documentation.</p>
+<h2 id="component-details">2. Component Details</h2>
+<h3 id="component-diagrams">2.0 Component Diagram/s</h3>
+<pre class=" language-mermaid"><svg id="mermaid-svg-T2g6GCNjgmQz0LhD" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="433.03125" style="max-width: 378.015625px;" viewBox="0 0 378.015625 433.03125"><style>#mermaid-svg-T2g6GCNjgmQz0LhD{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-T2g6GCNjgmQz0LhD .error-icon{fill:#552222;}#mermaid-svg-T2g6GCNjgmQz0LhD .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-T2g6GCNjgmQz0LhD .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-T2g6GCNjgmQz0LhD .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-T2g6GCNjgmQz0LhD .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-T2g6GCNjgmQz0LhD .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-T2g6GCNjgmQz0LhD .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-T2g6GCNjgmQz0LhD .marker{fill:#666;stroke:#666;}#mermaid-svg-T2g6GCNjgmQz0LhD .marker.cross{stroke:#666;}#mermaid-svg-T2g6GCNjgmQz0LhD svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-T2g6GCNjgmQz0LhD .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-svg-T2g6GCNjgmQz0LhD .cluster-label text{fill:#333;}#mermaid-svg-T2g6GCNjgmQz0LhD .cluster-label span{color:#333;}#mermaid-svg-T2g6GCNjgmQz0LhD .label text,#mermaid-svg-T2g6GCNjgmQz0LhD span{fill:#000000;color:#000000;}#mermaid-svg-T2g6GCNjgmQz0LhD .node rect,#mermaid-svg-T2g6GCNjgmQz0LhD .node circle,#mermaid-svg-T2g6GCNjgmQz0LhD .node ellipse,#mermaid-svg-T2g6GCNjgmQz0LhD .node polygon,#mermaid-svg-T2g6GCNjgmQz0LhD .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-svg-T2g6GCNjgmQz0LhD .node .label{text-align:center;}#mermaid-svg-T2g6GCNjgmQz0LhD .node.clickable{cursor:pointer;}#mermaid-svg-T2g6GCNjgmQz0LhD .arrowheadPath{fill:#333333;}#mermaid-svg-T2g6GCNjgmQz0LhD .edgePath .path{stroke:#666;stroke-width:1.5px;}#mermaid-svg-T2g6GCNjgmQz0LhD .flowchart-link{stroke:#666;fill:none;}#mermaid-svg-T2g6GCNjgmQz0LhD .edgeLabel{background-color:white;text-align:center;}#mermaid-svg-T2g6GCNjgmQz0LhD .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-svg-T2g6GCNjgmQz0LhD .cluster rect{fill:hsl(210,66.6666666667%,95%);stroke:#26a;stroke-width:1px;}#mermaid-svg-T2g6GCNjgmQz0LhD .cluster text{fill:#333;}#mermaid-svg-T2g6GCNjgmQz0LhD .cluster span{color:#333;}#mermaid-svg-T2g6GCNjgmQz0LhD div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160,0%,93.3333333333%);border:1px solid #26a;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg-T2g6GCNjgmQz0LhD:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-T2g6GCNjgmQz0LhD flowchart{fill:apa;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-GUI LE-PortManager" id="L-GUI-PortManager" style="opacity: 1;"><path class="path" d="M175.88763350474684,54.71875L126.4453125,93.078125L126.4453125,131.4375" marker-end="url(https://stackedit.io/app#arrowhead82)" style="fill:none"></path><defs><marker id="arrowhead82" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-PortManager LE-SerialPort" id="L-PortManager-SerialPort" style="opacity: 1;"><path class="path" d="M106.62532634493671,178.15625L74.078125,216.515625L74.078125,254.875" marker-end="url(https://stackedit.io/app#arrowhead83)" style="fill:none"></path><defs><marker id="arrowhead83" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-PortManager LE-DataProcessor" id="L-PortManager-DataProcessor" style="opacity: 1;"><path class="path" d="M158.39295391613925,178.15625L210.85546875,216.515625L260.2977897547468,254.875" marker-end="url(https://stackedit.io/app#arrowhead84)" style="fill:none"></path><defs><marker id="arrowhead84" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-DataProcessor LE-GUI" id="L-DataProcessor-GUI" style="opacity: 1;"><path class="path" d="M303.6885680379747,254.875L325.5,216.515625L325.5,154.796875L325.5,93.078125L251.22605320411392,54.71875" marker-end="url(https://stackedit.io/app#arrowhead85)" style="fill:none"></path><defs><marker id="arrowhead85" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-SerialPort LE-ExternalDevice" id="L-SerialPort-ExternalDevice" style="opacity: 1;"><path class="path" d="M74.078125,301.59375L74.078125,339.953125L74.078125,378.3125" marker-end="url(https://stackedit.io/app#arrowhead86)" style="fill:none"></path><defs><marker id="arrowhead86" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-DataProcessor LE-DataLogger" id="L-DataProcessor-DataLogger" style="opacity: 1;"><path class="path" d="M290.40625,301.59375L290.40625,339.953125L290.40625,378.3125" marker-end="url(https://stackedit.io/app#arrowhead87)" style="fill:none"></path><defs><marker id="arrowhead87" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(126.4453125,93.078125)" style="opacity: 1;"><g transform="translate(-56.9375,-13.359375)" class="label"><rect rx="0" ry="0" width="113.875" height="26.71875"></rect><foreignObject width="113.875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-GUI-PortManager" class="edgeLabel L-LS-GUI' L-LE-PortManager">User Commands</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(74.078125,216.515625)" style="opacity: 1;"><g transform="translate(-34.546875,-13.359375)" class="label"><rect rx="0" ry="0" width="69.09375" height="26.71875"></rect><foreignObject width="69.09375" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-PortManager-SerialPort" class="edgeLabel L-LS-PortManager' L-LE-SerialPort">Configure</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(210.85546875,216.515625)" style="opacity: 1;"><g transform="translate(-50.1875,-13.359375)" class="label"><rect rx="0" ry="0" width="100.375" height="26.71875"></rect><foreignObject width="100.375" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-PortManager-DataProcessor" class="edgeLabel L-LS-PortManager' L-LE-DataProcessor">Data Handling</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(325.5,154.796875)" style="opacity: 1;"><g transform="translate(-44.515625,-13.359375)" class="label"><rect rx="0" ry="0" width="89.03125" height="26.71875"></rect><foreignObject width="89.03125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-DataProcessor-GUI" class="edgeLabel L-LS-DataProcessor' L-LE-GUI">Format Data</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(74.078125,339.953125)" style="opacity: 1;"><g transform="translate(-55.6640625,-13.359375)" class="label"><rect rx="0" ry="0" width="111.328125" height="26.71875"></rect><foreignObject width="111.328125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-SerialPort-ExternalDevice" class="edgeLabel L-LS-SerialPort' L-LE-ExternalDevice">Communication</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(290.40625,339.953125)" style="opacity: 1;"><g transform="translate(-12.359375,-13.359375)" class="label"><rect rx="0" ry="0" width="24.71875" height="26.71875"></rect><foreignObject width="24.71875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-DataProcessor-DataLogger" class="edgeLabel L-LS-DataProcessor' L-LE-DataLogger">Log</span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-GUI-396" transform="translate(205.99609375,31.359375)" style="opacity: 1;"><rect rx="0" ry="0" x="-57.9609375" y="-23.359375" width="115.921875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-47.9609375,-13.359375)"><foreignObject width="95.921875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">GUI Interface</div></foreignObject></g></g></g><g class="node default" id="flowchart-PortManager-397" transform="translate(126.4453125,154.796875)" style="opacity: 1;"><rect rx="0" ry="0" x="-79.5859375" y="-23.359375" width="159.171875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-69.5859375,-13.359375)"><foreignObject width="139.171875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Serial Port Manager</div></foreignObject></g></g></g><g class="node default" id="flowchart-SerialPort-399" transform="translate(74.078125,278.234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-47.234375" y="-23.359375" width="94.46875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-37.234375,-13.359375)"><foreignObject width="74.46875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Serial Port</div></foreignObject></g></g></g><g class="node default" id="flowchart-DataProcessor-401" transform="translate(290.40625,278.234375)" style="opacity: 1;"><rect rx="0" ry="0" x="-62.5859375" y="-23.359375" width="125.171875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-52.5859375,-13.359375)"><foreignObject width="105.171875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Data Processor</div></foreignObject></g></g></g><g class="node default" id="flowchart-ExternalDevice-405" transform="translate(74.078125,401.671875)" style="opacity: 1;"><rect rx="0" ry="0" x="-66.078125" y="-23.359375" width="132.15625" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-56.078125,-13.359375)"><foreignObject width="112.15625" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">External Device</div></foreignObject></g></g></g><g class="node default" id="flowchart-DataLogger-407" transform="translate(290.40625,401.671875)" style="opacity: 1;"><rect rx="0" ry="0" x="-52.7421875" y="-23.359375" width="105.484375" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-42.7421875,-13.359375)"><foreignObject width="85.484375" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Data Logger</div></foreignObject></g></g></g></g></g></g></svg></pre>
+<h2 id="component-1-gui-interface-1">2.1 Component 1: GUI Interface</h2>
+<h3 id="module-1-user-input-handler">2.1.1 Module 1: User Input Handler</h3>
+<p>Responsible for capturing and processing user inputs, such as COM port selection, baud rate configuration, and data to be sent.</p>
+<h3 id="module-2-data-display">2.1.2 Module 2: Data Display</h3>
+<p>Displays incoming data from the Serial Port Manager and highlights sent data in green as per user actions.</p>
+<h2 id="component-2-serial-port-manager-1">2.2 Component 2: Serial Port Manager</h2>
+<h3 id="module-1-port-configuration">2.2.1 Module 1: Port Configuration</h3>
+<p>Handles the opening, closing, and configuration of COM ports based on user selections from the GUI Interface.</p>
+<h3 id="module-2-data-transmission">2.2.2 Module 2: Data Transmission</h3>
+<p>Manages the sending and receiving of data through the configured COM port. It sends user data to the Serial Port and processes incoming data from it.</p>
+<h2 id="component-3-data-processor">2.3 Component 3: Data Processor</h2>
+<h3 id="module-1-data-formatter">2.3.1 Module 1: Data Formatter</h3>
+<p>Formats incoming data for display in the GUI Interface, including highlighting sent data in green.</p>
+<h3 id="module-2-data-logger">2.3.2 Module 2: Data Logger</h3>
+<p>Optionally logs all incoming and outgoing data for debugging and analysis purposes.</p>
+<h2 id="supporting-information-6">3. Supporting Information</h2>
+<h3 id="table-of-contents-6">3.1 Table of Contents</h3>
+<p>(Generated automatically by document generation tools)</p>
+<h3 id="appendix-a-diagrams-2">3.2 Appendix A: Diagrams</h3>
+<ul>
+<li>Component Diagrams for each major component of the Serial Terminal Application.</li>
+</ul>
+<h3 id="appendix-b-references-5">3.3 Appendix B: References</h3>
+<p>N/A</p>
+<h3 id="index-6">3.4 Index</h3>
+<p>(Generated automatically by document generation tools)</p>
+<hr>
+<h1 id="unit-testing-for-serial-terminal-application">Unit Testing for Serial Terminal Application</h1>
+<h2 id="introduction-7">1. Introduction</h2>
+<h3 id="purpose-7">1.1 Purpose</h3>
+<p>The purpose of this document is to outline the unit testing strategy for the Serial Terminal Application. It aims to ensure that each individual unit of the application performs as designed.</p>
+<h3 id="scope-7">1.2 Scope</h3>
+<p>This document covers the unit testing phase of the Serial Terminal Application, detailing the test cases designed to validate the functionality of individual modules within the application.</p>
+<h3 id="definitions-acronyms-and-abbreviations-7">1.3 Definitions, Acronyms, and Abbreviations</h3>
+<ul>
+<li><strong>GUI</strong>: Graphical User Interface</li>
+<li><strong>COM Port</strong>: Communication Port</li>
+</ul>
+<h3 id="references-7">1.4 References</h3>
+<p>N/A</p>
+<h3 id="overview-7">1.5 Overview</h3>
+<p>The document is structured to present test cases, followed by the expected test results. Supporting information and appendices provide additional context and documentation.</p>
+<h2 id="test-cases-2">2. Test Cases</h2>
+<h3 id="test-cases-table-1">2.0 Test Cases Table</h3>
+
+<table>
+<thead>
+<tr>
+<th>TEST_ID</th>
+<th>Type</th>
+<th>Description</th>
+<th>Traceability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNIT_TEST_01</td>
+<td>Functional</td>
+<td>Verify that the User Input Handler correctly processes COM port selections.</td>
+<td>REQ_01</td>
+</tr>
+<tr>
+<td>UNIT_TEST_02</td>
+<td>Functional</td>
+<td>Test the Data Transmission module’s ability to send data through the Serial Port.</td>
+<td>REQ_05</td>
+</tr>
+<tr>
+<td>UNIT_TEST_03</td>
+<td>Functional</td>
+<td>Ensure the Data Display module correctly highlights sent data in green.</td>
+<td>REQ_07</td>
+</tr>
+</tbody>
+</table><h3 id="test-case-1-user-input-handler">2.1 Test Case 1: User Input Handler</h3>
+<p><strong>Objective</strong>: Ensure that the User Input Handler module correctly processes COM port selections.</p>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>Simulate user selection of a COM port.</li>
+<li>Check if the selected COM port is correctly identified and stored by the module.</li>
+</ol>
+<p><strong>Expected Result</strong>: The User Input Handler should correctly identify and store the selected COM port.</p>
+<h3 id="test-case-2-data-transmission">2.2 Test Case 2: Data Transmission</h3>
+<p><strong>Objective</strong>: Test the Data Transmission module’s ability to send data through the Serial Port.</p>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>Provide a string of data to the Data Transmission module.</li>
+<li>Simulate sending the data through a mock Serial Port.</li>
+<li>Verify that the data is correctly formatted and sent.</li>
+</ol>
+<p><strong>Expected Result</strong>: The Data Transmission module should correctly format and send the provided data through the Serial Port.</p>
+<h3 id="test-case-3-data-display">2.3 Test Case 3: Data Display</h3>
+<p><strong>Objective</strong>: Ensure the Data Display module correctly highlights sent data in green.</p>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>Simulate sending data through the application.</li>
+<li>Check if the sent data is displayed in the GUI Interface.</li>
+<li>Verify that the sent data is highlighted in green.</li>
+</ol>
+<p><strong>Expected Result</strong>: The Data Display module should correctly display and highlight sent data in green in the GUI Interface.</p>
+<h2 id="test-results-expected-2">3. Test Results (Expected)</h2>
+<h3 id="test-case-1-results-2">3.1 Test Case 1 Results</h3>
+<p>The User Input Handler correctly processed COM port selections, meeting the requirements specified in REQ_01.</p>
+<h3 id="test-case-2-results-2">3.2 Test Case 2 Results</h3>
+<p>The Data Transmission module successfully sent data through the mock Serial Port, fulfilling the requirement specified in REQ_05.</p>
+<h3 id="test-case-3-results-2">3.3 Test Case 3 Results</h3>
+<p>The Data Display module accurately displayed and highlighted sent data in green, confirming the requirements specified in REQ_07 were met.</p>
+<h2 id="supporting-information-7">4. Supporting Information</h2>
+<h3 id="table-of-contents-7">4.1 Table of Contents</h3>
+<p>(Generated automatically by document generation tools)</p>
+<h3 id="appendix-a-test-cases-3">4.2 Appendix A: Test Cases</h3>
+<p>Detailed descriptions and procedures for each test case mentioned in Section 2.</p>
+<h3 id="appendix-b-references-6">4.3 Appendix B: References</h3>
+<p>N/A</p>
+<h3 id="index-7">4.4 Index</h3>
+<p>(Generated automatically by document generation tools)</p>
+<hr>
+<h1 id="main.py-for-serial-terminal-application"><a href="http://main.py">main.py</a> for Serial Terminal Application</h1>
+<p>This Python script is a simplified version of a Serial Terminal Application. It demonstrates the core functionality needed to select a COM port, configure the baud rate, open/close the port, send data, and display incoming data. This example uses the <code>pySerial</code> library for serial communication.</p>
+<h2 id="imports">Imports</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> serial
+<span class="token keyword">import</span> threading
+<span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+<span class="token keyword">from</span> tkinter <span class="token keyword">import</span> scrolledtext
+<span class="token keyword">from</span> tkinter <span class="token keyword">import</span> ttk
+</code></pre>
+<h2 id="constants">Constants</h2>
+<pre class=" language-python"><code class="prism  language-python">DEFAULT_BAUD_RATE <span class="token operator">=</span> <span class="token number">9600</span>
+</code></pre>
+<h2 id="functions">Functions</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">read_from_port</span><span class="token punctuation">(</span>ser<span class="token punctuation">,</span> text_area<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> ser<span class="token punctuation">.</span>is_open<span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            reading <span class="token operator">=</span> ser<span class="token punctuation">.</span>readline<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+            text_area<span class="token punctuation">.</span>configure<span class="token punctuation">(</span>state<span class="token operator">=</span><span class="token string">'normal'</span><span class="token punctuation">)</span>
+            text_area<span class="token punctuation">.</span>insert<span class="token punctuation">(</span>tk<span class="token punctuation">.</span>END<span class="token punctuation">,</span> reading<span class="token punctuation">)</span>
+
+            text_area<span class="token punctuation">.</span>configure<span class="token punctuation">(</span>state<span class="token operator">=</span><span class="token string">'disabled'</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Error reading from the serial port: "</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span>
+            <span class="token keyword">break</span>
+</code></pre>
+<h2 id="classes">Classes</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">SerialApp</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> master<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>master <span class="token operator">=</span> master
+        self<span class="token punctuation">.</span>serial_port <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>init_ui<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">init_ui</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>master<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Serial Terminal"</span><span class="token punctuation">)</span>
+        
+        <span class="token comment"># COM Port selection</span>
+        ttk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>self<span class="token punctuation">.</span>master<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"COM Port:"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grid<span class="token punctuation">(</span>column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>com_port <span class="token operator">=</span> ttk<span class="token punctuation">.</span>Combobox<span class="token punctuation">(</span>self<span class="token punctuation">.</span>master<span class="token punctuation">,</span> values<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"COM1"</span><span class="token punctuation">,</span> <span class="token string">"COM2"</span><span class="token punctuation">,</span> <span class="token string">"COM3"</span><span class="token punctuation">,</span> <span class="token string">"COM4"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">17</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>com_port<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>column<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+        
+        <span class="token comment"># Baud Rate selection</span>
+        ttk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>self<span class="token punctuation">.</span>master<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Baud Rate:"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grid<span class="token punctuation">(</span>column<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>baud_rate <span class="token operator">=</span> ttk<span class="token punctuation">.</span>Combobox<span class="token punctuation">(</span>self<span class="token punctuation">.</span>master<span class="token punctuation">,</span> values<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">9600</span><span class="token punctuation">,</span> <span class="token number">19200</span><span class="token punctuation">,</span> <span class="token number">38400</span><span class="token punctuation">,</span> <span class="token number">57600</span><span class="token punctuation">,</span> <span class="token number">115200</span><span class="token punctuation">]</span><span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">17</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>baud_rate<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>column<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>baud_rate<span class="token punctuation">.</span>current<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment"># Default baud rate</span>
+        
+        <span class="token comment"># Open/Close Button</span>
+        self<span class="token punctuation">.</span>open_button <span class="token operator">=</span> ttk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>self<span class="token punctuation">.</span>master<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Open Port"</span><span class="token punctuation">,</span> command<span class="token operator">=</span>self<span class="token punctuation">.</span>open_port<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>open_button<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>column<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+        
+        <span class="token comment"># Text area for displaying incoming data</span>
+        self<span class="token punctuation">.</span>text_area <span class="token operator">=</span> scrolledtext<span class="token punctuation">.</span>ScrolledText<span class="token punctuation">(</span>self<span class="token punctuation">.</span>master<span class="token punctuation">,</span> state<span class="token operator">=</span><span class="token string">'disabled'</span><span class="token punctuation">,</span> height<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">70</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>text_area<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> row<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> columnspan<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+        
+        <span class="token comment"># Text input for sending data</span>
+        self<span class="token punctuation">.</span>text_input <span class="token operator">=</span> ttk<span class="token punctuation">.</span>Entry<span class="token punctuation">(</span>self<span class="token punctuation">.</span>master<span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">60</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>text_input<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> row<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> columnspan<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+        
+        <span class="token comment"># Send Button</span>
+        self<span class="token punctuation">.</span>send_button <span class="token operator">=</span> ttk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>self<span class="token punctuation">.</span>master<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Send"</span><span class="token punctuation">,</span> command<span class="token operator">=</span>self<span class="token punctuation">.</span>send_data<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>send_button<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>column<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> row<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">open_port</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>serial_port <span class="token operator">and</span> self<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>is_open<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>open_button<span class="token punctuation">.</span>config<span class="token punctuation">(</span>text<span class="token operator">=</span><span class="token string">"Open Port"</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>serial_port <span class="token operator">=</span> serial<span class="token punctuation">.</span>Serial<span class="token punctuation">(</span>self<span class="token punctuation">.</span>com_port<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>baud_rate<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>open_button<span class="token punctuation">.</span>config<span class="token punctuation">(</span>text<span class="token operator">=</span><span class="token string">"Close Port"</span><span class="token punctuation">)</span>
+                threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>read_from_port<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>serial_port<span class="token punctuation">,</span> self<span class="token punctuation">.</span>text_area<span class="token punctuation">)</span><span class="token punctuation">,</span> daemon<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Error opening the serial port: "</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">send_data</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>serial_port <span class="token operator">and</span> self<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>is_open<span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>write<span class="token punctuation">(</span>self<span class="token punctuation">.</span>text_input<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>text_area<span class="token punctuation">.</span>configure<span class="token punctuation">(</span>state<span class="token operator">=</span><span class="token string">'normal'</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>text_area<span class="token punctuation">.</span>insert<span class="token punctuation">(</span>tk<span class="token punctuation">.</span>END<span class="token punctuation">,</span> <span class="token string">"Sent: "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>text_input<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"\n"</span><span class="token punctuation">,</span> <span class="token string">'sent'</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>text_area<span class="token punctuation">.</span>configure<span class="token punctuation">(</span>state<span class="token operator">=</span><span class="token string">'disabled'</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>text_input<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> tk<span class="token punctuation">.</span>END<span class="token punctuation">)</span>
+            <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Error sending data: "</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Serial port is not open."</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="main-execution">Main Execution</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    root <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    app <span class="token operator">=</span> SerialApp<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
+    root<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>This script provides a basic GUI for a Serial Terminal Application using Tkinter and pySerial. It allows the user to select a COM port and baud rate, open/close the selected port, send data, and view incoming data. Note that this is a simplified example and may need adjustments based on your specific requirements and environment.</p>
+<hr>
+<h1 id="unit_tests.py-for-serial-terminal-application">unit_tests.py for Serial Terminal Application</h1>
+<p>This Python script provides a basic framework for unit testing the Serial Terminal Application. It uses the <code>unittest</code> framework to define and run tests on the application’s functionality. Given the nature of the Serial Terminal Application, these tests will focus on the non-hardware interaction parts of the code, such as data processing and UI logic. For simplicity, this example assumes that the <code>main.py</code> script (the Serial Terminal Application) has functions and classes that can be imported and tested in isolation.</p>
+<h2 id="imports-1">Imports</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> unittest
+<span class="token keyword">from</span> unittest<span class="token punctuation">.</span>mock <span class="token keyword">import</span> patch
+<span class="token keyword">from</span> main <span class="token keyword">import</span> SerialApp<span class="token punctuation">,</span> read_from_port
+</code></pre>
+<h2 id="mock-setup">Mock Setup</h2>
+<p>Before writing the test cases, we’ll need to mock the serial port to simulate reading from and writing to a COM port without requiring actual hardware.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">MockSerialPort</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>is_open <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token string">"Test data\n"</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>  <span class="token comment"># Simulated incoming data</span>
+        self<span class="token punctuation">.</span>received_data <span class="token operator">=</span> b<span class="token string">""</span>
+
+    <span class="token keyword">def</span> <span class="token function">open</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>is_open <span class="token operator">=</span> <span class="token boolean">True</span>
+
+    <span class="token keyword">def</span> <span class="token function">close</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>is_open <span class="token operator">=</span> <span class="token boolean">False</span>
+
+    <span class="token keyword">def</span> <span class="token function">readline</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>data
+
+    <span class="token keyword">def</span> <span class="token function">write</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>received_data <span class="token operator">+=</span> data
+
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self
+
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+</code></pre>
+<h2 id="test-cases-3">Test Cases</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">TestSerialApp</span><span class="token punctuation">(</span>unittest<span class="token punctuation">.</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    @patch<span class="token punctuation">(</span><span class="token string">'main.serial.Serial'</span><span class="token punctuation">,</span> return_value<span class="token operator">=</span>MockSerialPort<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">test_open_close_port</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> mock_serial<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        app <span class="token operator">=</span> SerialApp<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>  <span class="token comment"># Passing None because we don't need an actual Tkinter root for these tests</span>
+        app<span class="token punctuation">.</span>com_port<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"COM1"</span><span class="token punctuation">)</span>
+        app<span class="token punctuation">.</span>baud_rate<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"9600"</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Test opening the port</span>
+        app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertTrue<span class="token punctuation">(</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>is_open<span class="token punctuation">)</span>
+
+        <span class="token comment"># Test closing the port</span>
+        app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertFalse<span class="token punctuation">(</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>is_open<span class="token punctuation">)</span>
+
+    @patch<span class="token punctuation">(</span><span class="token string">'main.serial.Serial'</span><span class="token punctuation">,</span> return_value<span class="token operator">=</span>MockSerialPort<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">test_send_data</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> mock_serial<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        app <span class="token operator">=</span> SerialApp<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+        app<span class="token punctuation">.</span>com_port<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"COM1"</span><span class="token punctuation">)</span>
+        app<span class="token punctuation">.</span>baud_rate<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"9600"</span><span class="token punctuation">)</span>
+        app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        test_data <span class="token operator">=</span> <span class="token string">"Hello, World!"</span>
+        app<span class="token punctuation">.</span>text_input<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> test_data<span class="token punctuation">)</span>
+        app<span class="token punctuation">.</span>send_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>assertEqual<span class="token punctuation">(</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>received_data<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> test_data<span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    unittest<span class="token punctuation">.</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="explanation">Explanation</h2>
+<ul>
+<li><strong>Mock Setup</strong>: We create a <code>MockSerialPort</code> class to simulate the behavior of a real serial port. This allows us to test the opening and closing of the port, as well as sending and receiving data, without needing actual hardware.</li>
+<li><strong>Test Cases</strong>:
+<ul>
+<li><code>test_open_close_port</code>: This test checks if the <code>SerialApp</code> class can successfully open and close a COM port using the mocked serial port.</li>
+<li><code>test_send_data</code>: This test verifies that data sent through the <code>SerialApp</code> class is correctly transmitted to the mocked serial port.</li>
+</ul>
+</li>
+</ul>
+<p>To run these tests, save the code in a file named <code>unit_tests.py</code> and ensure it’s in the same directory as your <code>main.py</code> script. Then, run the tests from the command line with <code>python -m unittest unit_tests.py</code>.</p>
+<hr>
+<h1 id="integration_tests.py-for-serial-terminal-application">integration_tests.py for Serial Terminal Application</h1>
+<p>This Python script provides a basic framework for integration testing of the Serial Terminal Application. It uses the <code>unittest</code> framework to define and run tests that verify the integration between different components of the application. Given the nature of the Serial Terminal Application, these tests will focus on the integration of the main functional components, assuming that <code>main.py</code> (the Serial Terminal Application) has been structured to allow for such testing.</p>
+<h2 id="imports-2">Imports</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> unittest
+<span class="token keyword">from</span> unittest<span class="token punctuation">.</span>mock <span class="token keyword">import</span> MagicMock<span class="token punctuation">,</span> patch
+<span class="token keyword">from</span> main <span class="token keyword">import</span> SerialApp
+</code></pre>
+<h2 id="mock-setup-1">Mock Setup</h2>
+<p>To facilitate integration testing without requiring actual serial hardware, we’ll mock the serial port interactions. This approach allows us to simulate the behavior of the serial port and focus on the integration aspects of the application.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">MockSerialPort</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>is_open <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token string">"Mocked data\n"</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>  <span class="token comment"># Simulated incoming data</span>
+        self<span class="token punctuation">.</span>received_data <span class="token operator">=</span> b<span class="token string">""</span>
+
+    <span class="token keyword">def</span> <span class="token function">open</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>is_open <span class="token operator">=</span> <span class="token boolean">True</span>
+
+    <span class="token keyword">def</span> <span class="token function">close</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>is_open <span class="token operator">=</span> <span class="token boolean">False</span>
+
+    <span class="token keyword">def</span> <span class="token function">readline</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>data
+
+    <span class="token keyword">def</span> <span class="token function">write</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>received_data <span class="token operator">+=</span> data
+
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self
+
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+</code></pre>
+<h2 id="test-cases-4">Test Cases</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">TestSerialAppIntegration</span><span class="token punctuation">(</span>unittest<span class="token punctuation">.</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    @patch<span class="token punctuation">(</span><span class="token string">'main.serial.Serial'</span><span class="token punctuation">,</span> return_value<span class="token operator">=</span>MockSerialPort<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">test_integration_send_receive</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> mock_serial<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Initialize the application with a mocked root to avoid GUI operations</span>
+        app <span class="token operator">=</span> SerialApp<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>  <span class="token comment"># Passing None because we don't need an actual Tkinter root for these tests</span>
+        app<span class="token punctuation">.</span>com_port<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"COM1"</span><span class="token punctuation">)</span>
+        app<span class="token punctuation">.</span>baud_rate<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"9600"</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Simulate opening the port</span>
+        app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertTrue<span class="token punctuation">(</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>is_open<span class="token punctuation">,</span> <span class="token string">"Port should be open"</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Simulate sending data</span>
+        test_data <span class="token operator">=</span> <span class="token string">"Integration Test"</span>
+        app<span class="token punctuation">.</span>text_input<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> test_data<span class="token punctuation">)</span>
+        app<span class="token punctuation">.</span>send_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Verify that data is sent</span>
+        self<span class="token punctuation">.</span>assertEqual<span class="token punctuation">(</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>received_data<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> test_data<span class="token punctuation">,</span> <span class="token string">"Sent data should match"</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Simulate receiving data and verify it's processed correctly</span>
+        <span class="token comment"># Note: In a real application, you might have a callback or listener for incoming data.</span>
+        <span class="token comment"># Here, we directly call a hypothetical method that processes incoming data for simplicity.</span>
+        app<span class="token punctuation">.</span>process_incoming_data<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Assuming this method exists and updates some part of the UI or internal state</span>
+        self<span class="token punctuation">.</span>assertTrue<span class="token punctuation">(</span>app<span class="token punctuation">.</span>some_ui_element_or_state_updated<span class="token punctuation">,</span> <span class="token string">"UI element or state should be updated with incoming data"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    unittest<span class="token punctuation">.</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="explanation-1">Explanation</h2>
+<ul>
+<li><strong>Mock Setup</strong>: We create a <code>MockSerialPort</code> class to simulate the behavior of a real serial port. This allows us to test the integration of components without needing actual hardware.</li>
+<li><strong>Test Cases</strong>:
+<ul>
+<li><code>test_integration_send_receive</code>: This test checks the integration between the GUI components and the serial port handling components. It verifies that data can be sent and received correctly, and that the application’s state or UI is updated accordingly.</li>
+</ul>
+</li>
+</ul>
+<p>To run these tests, save the code in a file named <code>integration_tests.py</code> and ensure it’s in the same directory as your <code>main.py</code> script. Then, run the tests from the command line with <code>python -m unittest integration_tests.py</code>.</p>
+<hr>
+<h1 id="system_tests.py-for-serial-terminal-application">system_tests.py for Serial Terminal Application</h1>
+<p>This Python script outlines a basic framework for system testing of the Serial Terminal Application. It leverages the <code>unittest</code> framework to define and execute tests that simulate user interactions with the application as a whole, ensuring that all components work together as expected. This example assumes that <code>main.py</code> (the Serial Terminal Application) is structured in a way that allows for such testing, possibly with some modifications for testability.</p>
+<h2 id="imports-3">Imports</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> unittest
+<span class="token keyword">from</span> unittest<span class="token punctuation">.</span>mock <span class="token keyword">import</span> patch
+<span class="token keyword">from</span> main <span class="token keyword">import</span> SerialApp
+<span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+</code></pre>
+<h2 id="test-setup">Test Setup</h2>
+<p>System testing often involves simulating user interactions with the GUI. To achieve this without actual user input, we can programmatically trigger GUI events or call methods that represent user actions.</p>
+<h2 id="test-cases-5">Test Cases</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">TestSerialAppSystem</span><span class="token punctuation">(</span>unittest<span class="token punctuation">.</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">setUp</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Set up a Tkinter root window for testing</span>
+        self<span class="token punctuation">.</span>root <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>root<span class="token punctuation">.</span>withdraw<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Hide the GUI during tests</span>
+        self<span class="token punctuation">.</span>app <span class="token operator">=</span> SerialApp<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">tearDown</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Clean up after each test</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>serial_port <span class="token operator">and</span> self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>is_open<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>app <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>root<span class="token punctuation">.</span>destroy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    @patch<span class="token punctuation">(</span><span class="token string">'main.serial.Serial'</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">test_system_open_close_port</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> mock_serial<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Simulate selecting a COM port and opening it</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>com_port<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"COM1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertTrue<span class="token punctuation">(</span>mock_serial<span class="token punctuation">.</span>called<span class="token punctuation">,</span> <span class="token string">"Serial port should be opened"</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Simulate closing the port</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertFalse<span class="token punctuation">(</span>self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>is_open<span class="token punctuation">,</span> <span class="token string">"Serial port should be closed"</span><span class="token punctuation">)</span>
+
+    @patch<span class="token punctuation">(</span><span class="token string">'main.serial.Serial'</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">test_system_send_data</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> mock_serial<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        mock_serial_instance <span class="token operator">=</span> mock_serial<span class="token punctuation">.</span>return_value
+        mock_serial_instance<span class="token punctuation">.</span>readline<span class="token punctuation">.</span>return_value <span class="token operator">=</span> b<span class="token string">"Echoed data\n"</span>
+
+        <span class="token comment"># Simulate opening the port, sending data, and receiving echoed data</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>com_port<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"COM1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>text_input<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"Test data"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>send_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Verify that data was sent</span>
+        mock_serial_instance<span class="token punctuation">.</span>write<span class="token punctuation">.</span>assert_called_with<span class="token punctuation">(</span>b<span class="token string">"Test data"</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Assuming the application has a mechanism to process and display incoming data,</span>
+        <span class="token comment"># we would also verify that the echoed data is displayed. This might involve</span>
+        <span class="token comment"># checking the contents of a text widget or other UI elements.</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    unittest<span class="token punctuation">.</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="explanation-2">Explanation</h2>
+<ul>
+<li><strong>Test Setup</strong>: Before each test, we set up a Tkinter root window and initialize the <code>SerialApp</code> class. After each test, we clean up by closing any open serial ports and destroying the Tkinter root.</li>
+<li><strong>Test Cases</strong>:
+<ul>
+<li><code>test_system_open_close_port</code>: This test simulates the user selecting a COM port and toggling it open and closed. It verifies that the serial port is opened and closed as expected.</li>
+<li><code>test_system_send_data</code>: This test simulates the user opening a COM port, sending data, and checks if the data is sent through the serial port. It also sets up the expectation for receiving echoed data, which could be extended to verify that incoming data is correctly processed and displayed.</li>
+</ul>
+</li>
+</ul>
+<p>To run these tests, save the code in a file named <code>system_tests.py</code> and ensure it’s in the same directory as your <code>main.py</code> script. Then, execute the tests from the command line with <code>python -m unittest system_tests.py</code>. Note that these tests are simplified and may need adjustments based on the specific implementation details of your Serial Terminal Application.</p>
+<hr>
+<h1 id="acceptance_tests.py-for-serial-terminal-application">acceptance_tests.py for Serial Terminal Application</h1>
+<p>This Python script provides a framework for acceptance testing of the Serial Terminal Application. It utilizes the <code>unittest</code> framework to define and execute tests that verify the application meets the end-user requirements and behaves as expected from a user’s perspective. These tests simulate real-world usage scenarios to ensure the application’s functionality and usability meet the specified acceptance criteria.</p>
+<h2 id="imports-4">Imports</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> unittest
+<span class="token keyword">from</span> unittest<span class="token punctuation">.</span>mock <span class="token keyword">import</span> patch
+<span class="token keyword">from</span> main <span class="token keyword">import</span> SerialApp
+<span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+</code></pre>
+<h2 id="test-setup-1">Test Setup</h2>
+<p>Acceptance testing often involves simulating end-to-end scenarios that reflect how the user will interact with the application. To facilitate this, we can programmatically interact with the application’s GUI components.</p>
+<h2 id="test-cases-6">Test Cases</h2>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">TestSerialAppAcceptance</span><span class="token punctuation">(</span>unittest<span class="token punctuation">.</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">setUp</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Set up a Tkinter root window for testing</span>
+        self<span class="token punctuation">.</span>root <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>root<span class="token punctuation">.</span>withdraw<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Optionally hide the GUI during tests</span>
+        self<span class="token punctuation">.</span>app <span class="token operator">=</span> SerialApp<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">tearDown</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Clean up after each test</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>serial_port <span class="token operator">and</span> self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>is_open<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>app <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>root<span class="token punctuation">.</span>destroy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    @patch<span class="token punctuation">(</span><span class="token string">'main.serial.Serial'</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">test_acceptance_scenario_open_send_close</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> mock_serial<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Scenario: User opens a COM port, sends data, and closes the port</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>com_port<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"COM1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>baud_rate<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"9600"</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Simulate opening the port</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertTrue<span class="token punctuation">(</span>mock_serial<span class="token punctuation">.</span>called<span class="token punctuation">,</span> <span class="token string">"Serial port should be opened"</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Simulate sending data</span>
+        test_data <span class="token operator">=</span> <span class="token string">"Hello, World!"</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>text_input<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> test_data<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>send_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        mock_serial_instance <span class="token operator">=</span> mock_serial<span class="token punctuation">.</span>return_value
+        mock_serial_instance<span class="token punctuation">.</span>write<span class="token punctuation">.</span>assert_called_with<span class="token punctuation">(</span>test_data<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Simulate closing the port</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertFalse<span class="token punctuation">(</span>self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>serial_port<span class="token punctuation">.</span>is_open<span class="token punctuation">,</span> <span class="token string">"Serial port should be closed"</span><span class="token punctuation">)</span>
+
+    @patch<span class="token punctuation">(</span><span class="token string">'main.serial.Serial'</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">test_acceptance_scenario_receive_data</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> mock_serial<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Scenario: User opens a COM port and receives data</span>
+        mock_serial_instance <span class="token operator">=</span> mock_serial<span class="token punctuation">.</span>return_value
+
+        mock_serial_instance<span class="token punctuation">.</span>readline<span class="token punctuation">.</span>return_value <span class="token operator">=</span> b<span class="token string">"Received data\n"</span>
+
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>com_port<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">"COM1"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>app<span class="token punctuation">.</span>open_port<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># Assuming the application has a mechanism to automatically display incoming data,</span>
+        <span class="token comment"># we would verify that the received data is displayed. This might involve</span>
+        <span class="token comment"># checking the contents of a text widget or other UI elements.</span>
+        <span class="token comment"># Note: Actual implementation of this verification will depend on how the application</span>
+        <span class="token comment"># handles incoming data and updates the GUI.</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    unittest<span class="token punctuation">.</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="explanation-3">Explanation</h2>
+<ul>
+<li><strong>Test Setup</strong>: Before each test, we set up a Tkinter root window and initialize the <code>SerialApp</code> class without displaying the GUI. After each test, we ensure any open serial ports are closed, and we clean up the application and Tkinter root.</li>
+<li><strong>Test Cases</strong>:
+<ul>
+<li><code>test_acceptance_scenario_open_send_close</code>: This test simulates a user opening a COM port, sending data, and then closing the port. It verifies that the application can open and close the port as expected and that data is sent correctly.</li>
+<li><code>test_acceptance_scenario_receive_data</code>: This test simulates a user opening a COM port and receiving data. It sets up the expectation for receiving data and would include verification that the data is correctly displayed in the application’s GUI.</li>
+</ul>
+</li>
+</ul>
+<p>To run these tests, save the code in a file named <code>acceptance_tests.py</code> and ensure it’s in the same directory as your <code>main.py</code> script. Execute the tests from the command line with <code>python -m unittest acceptance_tests.py</code>. These tests are designed to verify that the application meets its acceptance criteria from an end-user perspective, focusing on key user scenarios and interactions.</p>
+<hr>
+</div>
+</body>
+
+</html>
