@@ -5,3 +5,7 @@ Gpt_V_Model is a Python application that harnesses the power of GPT (Generative 
 ## How It Works
 
 ![Gpt_V_Model Workflow](doc/diagram.jpg)
+
+## Features
+
+![Gpt_V_Model Features](doc/features.png)
